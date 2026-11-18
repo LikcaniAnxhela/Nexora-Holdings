@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEXORA HOLDINGS | 株式会社ネクソラ — Tokyo</title>
+  <meta name="description" content="Nexora Holdings: a Tokyo-based technology holding company. Drive to HQ virtually or join us on Zoom." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@300;400;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="progress"></div>
+  <div id="cursor-glow"></div>
+  <canvas id="bg"></canvas>
+  <div class="scanlines"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#top" class="logo glitch" data-text="NEXORA">NEXORA<span>/東京</span></a>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#stats">Metrics</a>
+      <a href="#hq">HQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <span class="clock" id="clock">--:--:-- JST</span>
+      <button class="btn mini" id="openPalette" title="Command palette (Ctrl+K)">⌘K</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">// TOKYO · JAPAN · 35.6762° N, 139.6503° E</p>
+      <h1 class="glitch" data-text="BUILDING THE">BUILDING THE</h1>
+      <h1 class="big"><span id="typed" class="grad"></span><span class="caret">_</span></h1>
+      <p class="lead">Nexora Holdings backs, builds and scales deep-tech companies across AI, robotics, quantum, space and clean energy. Headquartered in Marunouchi, operating at the speed of Shinkansen.</p>
+      <div class="cta">
+        <button class="btn primary" id="driveBtn"><span>🚗 DRIVE TO HQ — VIRTUALLY</span></button>
+        <button class="btn ghost" data-zoom><span>📡 JOIN VIA ZOOM</span></button>
+      </div>
+      <div class="scroll-hint">SCROLL ↓</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee"><div class="track">
+      <span>AI ◆ ROBOTICS ◆ QUANTUM ◆ SPACE ◆ FUSION ◆ SEMICONDUCTORS ◆ BIOTECH ◆ MOBILITY ◆ </span>
+      <span>AI ◆ ROBOTICS ◆ QUANTUM ◆ SPACE ◆ FUSION ◆ SEMICONDUCTORS ◆ BIOTECH ◆ MOBILITY ◆ </span>
+    </div></div>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+      <h2 class="reveal"><em>01</em> PORTFOLIO <small>ポートフォリオ</small></h2>
+      <div class="grid">
+        <article class="card tilt reveal" data-c="#00f0ff">
+          <div class="ico">◈</div><h3>NEXORA AI LABS</h3>
+          <p>Foundation models and agent systems trained on Japanese-language and industrial data.</p>
+          <span class="tag">AI · 2019</span>
+        </article>
+        <article class="card tilt reveal" data-c="#ff2bd6">
+          <div class="ico">⬡</div><h3>KIRIN ROBOTICS</h3>
+          <p>Humanoid and warehouse robots shipping to 400+ factories across Asia.</p>
+          <span class="tag">ROBOTICS · 2020</span>
+        </article>
+        <article class="card tilt reveal" data-c="#b6ff3b">
+          <div class="ico">⌬</div><h3>QUBIT SHINOBI</h3>
+          <p>Superconducting quantum processors with room-temperature control stacks.</p>
+          <span class="tag">QUANTUM · 2021</span>
+        </article>
+        <article class="card tilt reveal" data-c="#ffb800">
+          <div class="ico">✦</div><h3>ORBITAL KAGAYAKI</h3>
+          <p>Small-sat constellations and in-orbit servicing launched from Tanegashima.</p>
+          <span class="tag">SPACE · 2022</span>
+        </article>
+        <article class="card tilt reveal" data-c="#7a5cff">
+          <div class="ico">☼</div><h3>SOLARIS FUSION</h3>
+          <p>Compact magnetic-confinement fusion for urban-scale grid power.</p>
+          <span class="tag">ENERGY · 2023</span>
+        </article>
+        <article class="card tilt reveal" data-c="#00ffa3">
+          <div class="ico">◎</div><h3>HELIX BIO</h3>
+          <p>AI-designed therapeutics, from target discovery to clinical candidates.</p>
+          <span class="tag">BIOTECH · 2024</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="section stats">
+      <h2 class="reveal"><em>02</em> METRICS <small>実績</small></h2>
+      <div class="stat-row">
+        <div class="stat reveal"><b data-count="38">0</b><span>Portfolio companies</span></div>
+        <div class="stat reveal"><b data-count="4200">0</b><span>Engineers &amp; scientists</span></div>
+        <div class="stat reveal"><b data-count="12">0</b><span>Countries</span></div>
+        <div class="stat reveal"><b data-count="9" data-suffix="B¥">0</b><span>Capital deployed (¥ billions)</span></div>
+      </div>
+    </section>
+
+    <!-- HQ -->
+    <section id="hq" class="section hq">
+      <h2 class="reveal"><em>03</em> HEADQUARTERS <small>本社</small></h2>
+      <div class="hq-grid">
+        <div class="hq-info reveal">
+          <h3>Nexora Tower, Marunouchi</h3>
+          <p>1-1-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005<br/>2 min walk from Tokyo Station</p>
+          <p class="mono">LAT 35.6812 · LON 139.7671</p>
+          <p>Can't make the trip? Choose your arrival method:</p>
+          <div class="cta">
+            <button class="btn primary" id="driveBtn2"><span>🚗 DRIVE THERE</span></button>
+            <button class="btn ghost" data-zoom><span>📡 ZOOM</span></button>
+          </div>
+        </div>
+        <div class="radar reveal" aria-hidden="true">
+          <div class="sweep"></div>
+          <i style="--x:62%;--y:38%"></i><i style="--x:30%;--y:60%"></i><i style="--x:70%;--y:72%"></i><i style="--x:45%;--y:25%"></i>
+          <span class="hq-dot"></span>
+          <em>TOKYO</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="reveal"><em>04</em> CONNECT <small>お問い合わせ</small></h2>
+      <p class="lead reveal">Book a Zoom briefing with our investment team. We'll generate a calendar invite for you instantly.</p>
+      <button class="btn primary big-btn reveal" data-zoom><span>📡 SCHEDULE ZOOM BRIEFING</span></button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 NEXORA HOLDINGS K.K. — 株式会社ネクソラ · Fictional demo company. Replace with your real brand.</p>
+  </footer>
+
+  <!-- DRIVE MODE -->
+  <div id="drive" class="overlay" hidden>
+    <canvas id="road"></canvas>
+    <div class="hud">
+      <div class="hud-top">
+        <div><small>DESTINATION</small><br/>NEXORA TOWER · MARUNOUCHI</div>
+        <div><small>SPEED</small><br/><b id="spd">0</b> km/h</div>
+        <div class="bar"><small>PROGRESS</small><div class="bar-in"><i id="prog"></i></div></div>
+        <button class="btn mini" id="exitDrive">ESC ✕</button>
+      </div>
+      <div class="hud-help">← → STEER &nbsp;·&nbsp; ↑ / W ACCELERATE &nbsp;·&nbsp; ↓ / S BRAKE &nbsp;·&nbsp; SPACE = TURBO</div>
+      <div class="touch">
+        <button id="tl">◀</button><button id="tg">GO</button><button id="tr">▶</button>
+      </div>
+    </div>
+    <div class="arrived" id="arrived" hidden>
+      <h2 class="glitch" data-text="ARRIVED">ARRIVED</h2>
+      <p>Welcome to Nexora Tower, Tokyo. 到着しました。</p>
+      <div class="cta">
+        <button class="btn primary" data-zoom><span>📡 CONTINUE ON ZOOM</span></button>
+        <button class="btn ghost" id="again"><span>↻ DRIVE AGAIN</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZOOM MODAL -->
+  <div id="zoom" class="overlay modal" hidden>
+    <form class="panel" id="zoomForm">
+      <button type="button" class="x" id="closeZoom">✕</button>
+      <h3>📡 ZOOM BRIEFING</h3>
+      <label>Name<input required name="name" placeholder="Your name" /></label>
+      <label>Email<input required type="email" name="email" placeholder="you@company.com" /></label>
+      <label>Date &amp; time (your local time)<input required type="datetime-local" name="when" id="when" /></label>
+      <p class="note" id="tzNote"></p>
+      <div class="cta">
+        <button class="btn primary" type="submit"><span>DOWNLOAD INVITE &amp; OPEN ZOOM</span></button>
+      </div>
+    </form>
+  </div>
+
+  <!-- COMMAND PALETTE -->
+  <div id="palette" class="overlay modal" hidden>
+    <div class="panel pal">
+      <input id="palIn" placeholder="Type a command…  (drive, zoom, portfolio, hq, contact, top)" autocomplete="off" />
+      <ul id="palList"></ul>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
